@@ -1,0 +1,16 @@
+syntax = "proto3";
+package ris_4;
+
+
+message DecreaseByOneLetterRequest {
+  string word = 1;
+}
+
+message DecreaseByOneLetterResponse {
+  bool is_decreased = 1;
+}
+
+
+service RIS4Service {
+  rpc DecreaseByOneLetter(DecreaseByOneLetterRequest) returns (DecreaseByOneLetterResponse);
+}
